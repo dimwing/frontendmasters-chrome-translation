@@ -9,9 +9,10 @@
       let textTrack = document.getElementsByClassName('vjs-text-track-display')[0]
       if (textTrack && textTrack.firstElementChild && textTrack.firstElementChild.firstElementChild) {
         let textNode = textTrack.firstElementChild.firstElementChild.children
-        let text = textNode[textNode.length - 1].innerHTML
+        let text = textNode[textNode.length - 1].innerHTML.replace('&gt;&gt;', '')
         
         if (text !== oldText) {
+          console.debug(text)
           oldText = text
           setBasicText()
           // 字幕发送至后台翻译
