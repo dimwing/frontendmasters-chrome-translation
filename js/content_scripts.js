@@ -34,6 +34,7 @@
     let textTrack = document.getElementsByClassName('vjs-text-track-display')[0].firstElementChild.firstElementChild
     let englishText = textTrack.firstElementChild
     newText.id = 'newText'
+    newText.style = 'margin: 0px; position: absolute; top: -100%; left: 50%; transform: translate(-50%, 0); min-width: 80%; background-color: rgba(0, 0, 0, 0.8); border-radius: 10px'
     textTrack.insertBefore(newText, englishText)
   }
   init()
