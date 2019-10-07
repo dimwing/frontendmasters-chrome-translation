@@ -13,6 +13,9 @@ chrome.runtime.onMessage.addListener(
       if (!result.result) return
       info = result.result.join('') 
       senResponse(info)
+    }).catch((err) => {
+      info = '翻译出错'
+      senResponse(info)
     })
 
     return true
